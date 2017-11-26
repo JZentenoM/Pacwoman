@@ -34,7 +34,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/claseallegro.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="include/enemigo.h">
+			<Option compile="1" />
+		</Unit>
 		<Unit filename="include/entidad.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="include/escenario.h">
 			<Option compile="1" />
 		</Unit>
 		<Unit filename="include/mapa.h">

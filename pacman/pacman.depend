@@ -45,13 +45,16 @@
 
 1510239444 source:c:\users\spectre\documents\proyecto\pacwoman\include\mapa.h
 	<stdlib.h>
+	<stdlib.h>
 
 1510239444 source:c:\users\spectre\documents\proyecto\pacwoman\include\pacman.h
+	"entidad.h"
 	"entidad.h"
 
 1510239444 c:\users\spectre\documents\proyecto\pacwoman\include\entidad.h
 
 1510239444 source:c:\users\spectre\documents\proyecto\pacwoman\include\personaje.h
+	"entidad.h"
 	"entidad.h"
 
 1510239444 source:c:\users\spectre\documents\proyecto\pacwoman\include\powerup.h
@@ -61,8 +64,13 @@
 	<cstdlib>
 	"personaje.h"
 	"entidad.h"
+	<allegro.h>
+	<cstdlib>
+	"personaje.h"
+	"entidad.h"
 
 1510239444 c:\users\spectre\documents\proyecto\pacwoman\include\personaje.h
+	"entidad.h"
 	"entidad.h"
 
 1510239445 source:c:\users\spectre\documents\proyecto\pacwoman\src\entidad.cpp
@@ -132,37 +140,146 @@
 
 1511451214 source:c:\users\usuario\proyecto\pacwoman\src\escenario.cpp
 
-1510239444 source:c:\users\spectre\documents\proyecto\pacwoman\include\entidad.h
+1511632686 source:c:\users\spectre\documents\pacwoman con clases\pacwoman\include\entidad.h
 
-1510239444 source:c:\users\spectre\documents\proyecto\pacwoman\include\mapa.h
+1511633953 source:c:\users\spectre\documents\pacwoman con clases\pacwoman\include\mapa.h
 	<stdlib.h>
 
-1510239444 source:c:\users\spectre\documents\proyecto\pacwoman\include\pacman.h
+1511634900 source:c:\users\spectre\documents\pacwoman con clases\pacwoman\include\personaje.h
 	"entidad.h"
+	"escenario.h"
+	"claseallegro.h"
+	"enemigo.h"
 
-1510239444 c:\users\spectre\documents\proyecto\pacwoman\include\entidad.h
+1511632686 c:\users\spectre\documents\pacwoman con clases\pacwoman\include\entidad.h
 
-1510239444 source:c:\users\spectre\documents\proyecto\pacwoman\include\personaje.h
-	"entidad.h"
+1511635102 c:\users\spectre\documents\pacwoman con clases\pacwoman\include\escenario.h
+	<allegro.h>
 
-1510239444 source:c:\users\spectre\documents\proyecto\pacwoman\include\powerup.h
-
-1510239444 source:c:\users\spectre\documents\proyecto\pacwoman\main.cpp
+1511630611 c:\users\spectre\documents\pacwoman con clases\pacwoman\include\claseallegro.h
 	<allegro.h>
 	<cstdlib>
 	"personaje.h"
 	"entidad.h"
+	"escenario.h"
 
-1510239444 c:\users\spectre\documents\proyecto\pacwoman\include\personaje.h
+1511635113 c:\users\spectre\documents\pacwoman con clases\pacwoman\include\personaje.h
+	"entidad.h"
+	"escenario.h"
+	"claseallegro.h"
+	"enemigo.h"
+
+1511633283 c:\users\spectre\documents\pacwoman con clases\pacwoman\include\enemigo.h
+	"entidad.h"
+	"escenario.h"
+	"claseallegro.h"
+	"personaje.h"
+	<allegro.h>
+
+1511626448 source:c:\users\spectre\documents\pacwoman con clases\pacwoman\include\powerup.h
+
+1511633953 source:c:\users\spectre\documents\pacwoman con clases\pacwoman\main.cpp
+	<allegro.h>
+	<cstdlib>
+	"personaje.h"
+	"entidad.h"
+	"claseallegro.h"
+	"escenario.h"
+	"enemigo.h"
+
+1511626448 source:c:\users\spectre\documents\pacwoman con clases\pacwoman\src\entidad.cpp
+
+1511626448 source:c:\users\spectre\documents\pacwoman con clases\pacwoman\src\mapa.cpp
+
+1511626448 source:c:\users\spectre\documents\pacwoman con clases\pacwoman\src\personaje.cpp
+
+1511626448 source:c:\users\spectre\documents\pacwoman con clases\pacwoman\src\powerup.cpp
+
+1511642666 source:c:\users\usuario\hola12\pacman12\include\claseallegro.h
+	<allegro.h>
+	<cstdlib>
+	"personaje.h"
+	"entidad.h"
+	"escenario.h"
+
+1511660895 c:\users\usuario\hola12\pacman12\include\personaje.h
+	"entidad.h"
+	"escenario.h"
+	"claseallegro.h"
+	"enemigo.h"
+
+1511639586 c:\users\usuario\hola12\pacman12\include\entidad.h
+
+1511662096 c:\users\usuario\hola12\pacman12\include\escenario.h
+	<allegro.h>
+
+1511642666 c:\users\usuario\hola12\pacman12\include\claseallegro.h
+	<allegro.h>
+	<cstdlib>
+	"personaje.h"
+	"entidad.h"
+	"escenario.h"
+
+1511662253 c:\users\usuario\hola12\pacman12\include\enemigo.h
+	"entidad.h"
+	"escenario.h"
+	"claseallegro.h"
+	"personaje.h"
+	<allegro.h>
+	<cstdlib>
+
+1511662052 source:c:\users\usuario\hola12\pacman12\include\enemigo.h
+	"entidad.h"
+	"escenario.h"
+	"claseallegro.h"
+	"personaje.h"
+	<allegro.h>
+	<cstdlib>
+
+1511639586 source:c:\users\usuario\hola12\pacman12\include\entidad.h
+
+1511662096 source:c:\users\usuario\hola12\pacman12\include\escenario.h
+	<allegro.h>
+
+1511638889 source:c:\users\usuario\hola12\pacman12\include\mapa.h
+	<stdlib.h>
+
+1511638889 source:c:\users\usuario\hola12\pacman12\include\pacman.h
 	"entidad.h"
 
-1510239445 source:c:\users\spectre\documents\proyecto\pacwoman\src\entidad.cpp
+1511660895 source:c:\users\usuario\hola12\pacman12\include\personaje.h
+	"entidad.h"
+	"escenario.h"
+	"claseallegro.h"
+	"enemigo.h"
 
-1510239445 source:c:\users\spectre\documents\proyecto\pacwoman\src\mapa.cpp
+1511659641 source:c:\users\usuario\hola12\pacman12\include\powerup.h
+	<allegro.h>
+	"escenario.h"
+	"personaje.h"
+	"enemigo.h"
 
-1510239445 source:c:\users\spectre\documents\proyecto\pacwoman\src\pacman.cpp
+1511661712 source:c:\users\usuario\hola12\pacman12\main.cpp
+	<allegro.h>
+	<cstdlib>
+	"personaje.h"
+	"entidad.h"
+	"claseallegro.h"
+	"escenario.h"
+	"enemigo.h"
+	"powerup.h"
 
-1510239445 source:c:\users\spectre\documents\proyecto\pacwoman\src\powerup.cpp
+1511638890 source:c:\users\usuario\hola12\pacman12\src\entidad.cpp
 
-1510239445 source:c:\users\spectre\documents\proyecto\pacwoman\src\personaje.cpp
+1511638890 source:c:\users\usuario\hola12\pacman12\src\mapa.cpp
+
+1511638890 source:c:\users\usuario\hola12\pacman12\src\personaje.cpp
+
+1511638890 source:c:\users\usuario\hola12\pacman12\src\powerup.cpp
+
+1511659641 c:\users\usuario\hola12\pacman12\include\powerup.h
+	<allegro.h>
+	"escenario.h"
+	"personaje.h"
+	"enemigo.h"
 

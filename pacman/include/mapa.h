@@ -11,7 +11,6 @@ class mapa
         mapa(int x, int y){
         filas=x;
         columnas=y;
-
         }
 
         void crearMapa1(){
