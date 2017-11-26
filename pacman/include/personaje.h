@@ -6,6 +6,8 @@
 #include "claseallegro.h"
 #include "enemigo.h"
 
+#include <allegro.h>
+
 
 class personaje : public entidad
 {
@@ -40,6 +42,7 @@ class personaje : public entidad
         }
 
         void movimiento( escenario escenario1, int numJugadores){
+
 
             if (numJugadores==1){
                 if (key[KEY_LEFT]) direccion=2;
@@ -93,6 +96,21 @@ class personaje : public entidad
                         mapa1.mapa_1[filas_m1][col_m1]=' ';}}
 
         }
+
+        void choqueFantasma(enemigo en1,escenario escenario1, claseallegro juego){
+
+            if ((en1.posY == posY && en1.posX == posX) || (posY == en1.posY-20 && posX == en1.posX-20) || (posY == en1.posY+20 && posX == en1.posX+20)){
+                for (int j=0; j<=6;j++){
+                    clear(pacman);
+                    clear(escenario1.escenario_);
+                    escenario1.dibujar_mapa();
+                        blit(muerte,pacman,j*20,0,0,0,20,20);
+                        draw_sprite(escenario1.escenario_,pacman,posX, posY);
+                        juego.pantalla(escenario1);
+                        rest(90);}
+                    posX=20*10;
+                    posY=20*12;
+                    direccion=1;}}
 
 
 
