@@ -16,10 +16,10 @@ int main()
 
     escenario mapa1;
     personaje pacman1;
-    pacman1.setPosicion(300,360);
+    pacman1.setPosicion(30*19,30*12);
 
     enemigo fantasma1;
-    fantasma1.setPosicion(30*14,30*10);
+    fantasma1.setPosicion(30*19,30*8);
 
 
     powerup comida1;
@@ -29,10 +29,12 @@ int main()
         pacman1.movimiento(mapa1,1);
 
 
-        for (int filas_m1=0; filas_m1< 33; filas_m1++){
-                for(int col_m1=0; col_m1<51; col_m1++){
-                    if (pacman1.posY/20==filas_m1 && pacman1.posX/20 == col_m1)
-                        mapa1.mapa_1[filas_m1][col_m1]=' ';}}
+        for (int filas_m1=0; filas_m1< 17; filas_m1++){
+                for(int col_m1=0; col_m1<40; col_m1++){
+                    if (mapa1.mapa_1[filas_m1][col_m1]=='o'){
+                        if (pacman1.posY/30==filas_m1 && pacman1.posX/30 == col_m1)
+                            mapa1.mapa_1[filas_m1][col_m1]=' ';}}}
+
 
         clear(mapa1.escenario_);
 

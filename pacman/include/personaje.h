@@ -22,7 +22,7 @@ class personaje : public entidad
         direccion = 1;
         pacman_mb = load_bitmap("pacman.bmp",NULL);
         muerte = load_bitmap("muerte.bmp",NULL);
-        pacman = create_bitmap(20,20);
+        pacman = create_bitmap(30,30);
 
         }
 
@@ -33,15 +33,17 @@ class personaje : public entidad
 
         void dibujarPersonaje(escenario escenario1, bool r){
             if (r==true){
-                blit(pacman_mb, pacman, direccion*20,0,0,0,20,20);
+                blit(pacman_mb, pacman, direccion*30,0,0,0,30,30);
                 draw_sprite(escenario1.escenario_, pacman,posX, posY);}
 
             else{
-                blit(pacman_mb,pacman,1*20,0,0,0,20,20);
+                blit(pacman_mb,pacman,1*30,0,0,0,30,30);
                 draw_sprite(escenario1.escenario_, pacman,posX, posY);}
         }
 
-        void movimiento( escenario escenario1, int numJugadores){
+
+
+        void movimiento( escenario e1, int numJugadores){
 
 
             if (numJugadores==1){
@@ -62,54 +64,53 @@ class personaje : public entidad
                 else if (key[KEY_I]) direccion=4;
                 else if (key[KEY_K]) direccion=3; }
 
+            int d2=e1.mapa_1[posY/30][(posX-30)/30];
+            int d0=e1.mapa_1[posY/30][(posX+30)/30];
+            int d4=e1.mapa_1[(posY-30)/30][posX/30];
+            int d3=e1.mapa_1[(posY+30)/30][posX/30];
+
             if(direccion==2) {
-                if (escenario1.mapa_1[posY/20][(posX-20)/20] != 'X')
-                    posX -=20;
+            if ((d2 != 'V') && (d2 != 'D')&& (d2 != 'C')&& (d2 != 'N') && (d2 != 'S') && (d2 != 'B') && (d2 != 'J') && (d2 != 'R') && (d2 != 'E') && (d2 != 'W')&& (d2 != 'L')&& (d2 != 'H') )
+                    posX -=30;
                 else
                     direccion=1;
             }
             if(direccion==0) {
-                if (escenario1.mapa_1[posY/20][(posX+20)/20] != 'X')
-                    posX +=20;
+                if ((d0 != 'V') && (d0 != 'A')&& (d0 != 'X')&& (d0 != 'N') && (d0 != 'M') && (d0 != 'B') && (d0 != 'J') && (d0 != 'R') && (d0 != 'E')&& (d0 != 'Q') && (d0 != 'W')&& (d0 != 'L')&& (d0 != 'H'))
+                    posX +=30;
                 else
                     direccion=1;
                 }
             if (direccion==4) {
-                if (escenario1.mapa_1[(posY-20)/20][posX/20]!= 'X')
-                    posY -=20;
+                if ((d4 != 'X') && (d4!= 'Z')&& (d4 != 'C')&& (d4 != 'K') && (d4 != 'Q') && (d4 != 'M') && (d4 != 'B') && (d4 != 'D') && (d4 != 'R') && (d4 != 'N'))
+                    posY -=30;
                 else
                     direccion=1;
                     }
             if(direccion==3) {
-                 if (escenario1.mapa_1[(posY+20)/20][posX/20]!= 'X')
-                    posY +=20;
+                 if ((d3 != 'X') && (d3!= 'Z')&& (d3 != 'C')&& (d3 != 'K') && (d3 != 'Q') && (d3 != 'M') && (d3 != 'B') && (d3 != 'D') && (d3 != 'R')&& (d3 != 'A')&& (d3 != 'N')&& (d3 != 'S') && (d3 != 'W')&& (d3 != 'L')&& (d3 != 'E'))
+                    posY +=30;
                 else
                     direccion=1;
             }
 
         }
 
-        void comer(escenario mapa1){
-            for (int filas_m1=0; filas_m1< 33; filas_m1++){
-                for(int col_m1=0; col_m1<51; col_m1++){
-                    if (posY/20==filas_m1 &&posX/20 == col_m1)
-                        mapa1.mapa_1[filas_m1][col_m1]=' ';}}
 
-        }
 
         void choqueFantasma(enemigo en1,escenario escenario1, claseallegro juego){
 
-            if ((en1.posY == posY && en1.posX == posX) || (posY == en1.posY-20 && posX == en1.posX-20) || (posY == en1.posY+20 && posX == en1.posX+20)){
+            if ((en1.posY == posY && en1.posX == posX) || (posY == en1.posY-30 && posX == en1.posX-30) || (posY == en1.posY+30 && posX == en1.posX+30)){
                 for (int j=0; j<=6;j++){
                     clear(pacman);
                     clear(escenario1.escenario_);
                     escenario1.dibujar_mapa();
-                        blit(muerte,pacman,j*20,0,0,0,20,20);
+                        blit(muerte,pacman,j*30,0,0,0,30,30);
                         draw_sprite(escenario1.escenario_,pacman,posX, posY);
                         juego.pantalla(escenario1);
                         rest(90);}
-                    posX=20*10;
-                    posY=20*12;
+                    posX=30*19;
+                    posY=30*12;
                     direccion=1;}}
 
 
