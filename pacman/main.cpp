@@ -23,10 +23,11 @@ int main()
 
 
     powerup comida1;
+    powerup poder1;
 
     while(!key[KEY_ESC]){
 
-        pacman1.movimiento(mapa1,1);
+        pacman1.movimiento(mapa1,1,2);
 
 
         for (int filas_m1=0; filas_m1< 17; filas_m1++){
@@ -38,7 +39,9 @@ int main()
 
         clear(mapa1.escenario_);
 
-        comida1.dibujar_comida(mapa1,pacman1);
+        comida1.dibujar_comida(mapa1,1);
+        poder1.dibujar_comida(mapa1,1);
+
         mapa1.dibujar_mapa();
 
         pacman1.dibujarPersonaje(mapa1,true);

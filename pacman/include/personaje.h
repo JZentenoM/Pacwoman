@@ -43,7 +43,7 @@ class personaje : public entidad
 
 
 
-        void movimiento( escenario e1, int numJugadores){
+        void movimiento( escenario e1, int numJugadores, int m){
 
 
             if (numJugadores==1){
@@ -64,36 +64,69 @@ class personaje : public entidad
                 else if (key[KEY_I]) direccion=4;
                 else if (key[KEY_K]) direccion=3; }
 
-            int d2=e1.mapa_1[posY/30][(posX-30)/30];
-            int d0=e1.mapa_1[posY/30][(posX+30)/30];
-            int d4=e1.mapa_1[(posY-30)/30][posX/30];
-            int d3=e1.mapa_1[(posY+30)/30][posX/30];
+            int d2, d0, d4, d3;
+
+            if (m==1){
+            d2=e1.mapa_1[posY/30][(posX-30)/30];
+            d0=e1.mapa_1[posY/30][(posX+30)/30];
+            d4=e1.mapa_1[(posY-30)/30][posX/30];
+            d3=e1.mapa_1[(posY+30)/30][posX/30];}
+
+            else if (m==2){
+            d2=e1.mapa_2[posY/30][(posX-30)/30];
+            d0=e1.mapa_2[posY/30][(posX+30)/30];
+            d4=e1.mapa_2[(posY-30)/30][posX/30];
+            d3=e1.mapa_2[(posY+30)/30][posX/30];
+            }
 
             if(direccion==2) {
-            if ((d2 != 'V') && (d2 != 'D')&& (d2 != 'C')&& (d2 != 'N') && (d2 != 'S') && (d2 != 'B') && (d2 != 'J') && (d2 != 'R') && (d2 != 'E') && (d2 != 'W')&& (d2 != 'L')&& (d2 != 'H') )
+            if ((d2 != 'Z') && (d2 != 'X')&& (d2 != 'C')&& (d2 != 'V') &&
+                   (d2 != 'B') && (d2 != 'N') && (d2 != 'M') && (d2 != 'A') &&
+                    (d2 != 'S')&& (d2 != 'D')&& (d2 != 'F')&& (d2 != 'G')&& (d2 != 'H')
+                   && (d2 != 'W')&& (d2 != 'Q')&& (d2 != 'L')&& (d2 != 'K')&& (d2 != 'J')
+                   && (d2 != 'E')&& (d2 != 'R'))
                     posX -=30;
                 else
                     direccion=1;
             }
             if(direccion==0) {
-                if ((d0 != 'V') && (d0 != 'A')&& (d0 != 'X')&& (d0 != 'N') && (d0 != 'M') && (d0 != 'B') && (d0 != 'J') && (d0 != 'R') && (d0 != 'E')&& (d0 != 'Q') && (d0 != 'W')&& (d0 != 'L')&& (d0 != 'H'))
+                if ((d0 != 'Z') && (d0 != 'X')&& (d0 != 'C')&& (d0 != 'V') &&
+                   (d0 != 'B') && (d0 != 'N') && (d0 != 'M') && (d0 != 'A') &&
+                    (d0 != 'S')&& (d0 != 'D')&& (d0 != 'F')&& (d0 != 'G')&& (d0 != 'H')
+                   && (d0 != 'W')&& (d0 != 'Q')&& (d0 != 'L')&& (d0 != 'K')&& (d0 != 'J')
+                   && (d0 != 'E')&& (d0 != 'R'))
                     posX +=30;
                 else
                     direccion=1;
                 }
             if (direccion==4) {
-                if ((d4 != 'X') && (d4!= 'Z')&& (d4 != 'C')&& (d4 != 'K') && (d4 != 'Q') && (d4 != 'M') && (d4 != 'B') && (d4 != 'D') && (d4 != 'R') && (d4 != 'N'))
+                if ((d4 != 'Z') && (d4 != 'X')&& (d4 != 'C')&& (d4 != 'V') &&
+                   (d4!= 'B') && (d4 != 'N') && (d4 != 'M') && (d4 != 'A') &&
+                    (d4 != 'S')&& (d4 != 'D')&& (d4 != 'F')&& (d4 != 'G')&& (d4 != 'H')
+                   && (d4 != 'W')&& (d4 != 'Q')&& (d4 != 'L')&& (d4 != 'K')&& (d4 != 'J')
+                   && (d4 != 'E')&& (d4 != 'R'))
                     posY -=30;
                 else
                     direccion=1;
                     }
             if(direccion==3) {
-                 if ((d3 != 'X') && (d3!= 'Z')&& (d3 != 'C')&& (d3 != 'K') && (d3 != 'Q') && (d3 != 'M') && (d3 != 'B') && (d3 != 'D') && (d3 != 'R')&& (d3 != 'A')&& (d3 != 'N')&& (d3 != 'S') && (d3 != 'W')&& (d3 != 'L')&& (d3 != 'E'))
+                 if ((d3 != 'Z') && (d3 != 'X')&& (d3 != 'C')&& (d3 != 'V') &&
+                   (d3 != 'B') && (d3 != 'N') && (d3 != 'M') && (d3 != 'A') &&
+                    (d3 != 'S')&& (d3 != 'D')&& (d3 != 'F')&& (d3 != 'G')&& (d3 != 'H')
+                   && (d3 != 'W')&& (d3 != 'Q')&& (d3 != 'L')&& (d3 != 'K')&& (d3 != 'J')
+                   && (d3 != 'E')&& (d3 != 'R'))
                     posY +=30;
                 else
                     direccion=1;
             }
-
+            if(posX<=-30)
+                posX=1170;
+            else if (posX>=1170)
+                posX=-30;
+            if (posY<=-30)
+                posY=510;
+            else if (posY>=510)
+                posY=-30;
         }
 
 
@@ -113,6 +146,20 @@ class personaje : public entidad
                     posY=30*12;
                     direccion=1;}}
 
+
+        void comeFantasma(enemigo en1,escenario escenario1, claseallegro juego){
+            if ((en1.posY == posY && en1.posX == posX) || (posY == en1.posY-30 && posX == en1.posX-30) || (posY == en1.posY+30 && posX == en1.posX+30)){
+                for (int j=0; j<=6;j++){
+                    clear(en1.enemigo_);
+                    clear(escenario1.escenario_);
+                    escenario1.dibujar_mapa();
+                        blit(muerte,en1.enemigo_,j*30,0,0,0,30,30);
+                        draw_sprite(escenario1.escenario_,en1.enemigo_,en1.posX, en1.posY);
+                        juego.pantalla(escenario1);
+                        rest(90);}
+                    en1.posX=30*19;
+                    en1.posY=30*8;
+                    en1.direccion=1;}}
 
 
 };
