@@ -49,6 +49,7 @@
 		<Unit filename="include/mapa.h">
 			<Option compile="1" />
 		</Unit>
+		<Unit filename="include/menu.h" />
 		<Unit filename="include/personaje.h">
 			<Option compile="1" />
 		</Unit>
@@ -59,6 +60,7 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/entidad.cpp" />
 		<Unit filename="src/mapa.cpp" />
+		<Unit filename="src/menu.cpp" />
 		<Unit filename="src/personaje.cpp" />
 		<Unit filename="src/powerup.cpp" />
 		<Unit filename="src/vida.cpp" />

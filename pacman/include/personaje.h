@@ -147,19 +147,6 @@ class personaje : public entidad
                     direccion=1;}}
 
 
-        void comeFantasma(enemigo en1,escenario escenario1, claseallegro juego){
-            if ((en1.posY == posY && en1.posX == posX) || (posY == en1.posY-30 && posX == en1.posX-30) || (posY == en1.posY+30 && posX == en1.posX+30)){
-                for (int j=0; j<=6;j++){
-                    clear(en1.enemigo_);
-                    clear(escenario1.escenario_);
-                    escenario1.dibujar_mapa();
-                        blit(muerte,en1.enemigo_,j*30,0,0,0,30,30);
-                        draw_sprite(escenario1.escenario_,en1.enemigo_,en1.posX, en1.posY);
-                        juego.pantalla(escenario1);
-                        rest(90);}
-                    en1.posX=30*19;
-                    en1.posY=30*8;
-                    en1.direccion=1;}}
 
 
 };
