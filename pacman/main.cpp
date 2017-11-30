@@ -29,12 +29,17 @@ int main()
 
     play_midi(musica,1);
 
+    while (!key[KEY_ENTER]){
+            clear(menu1.buffer);
+            menu1.dibujarMenu();
+            juego.pantalla(menu1);}
+
 
     while(!key[KEY_ESC]){
 
+
+
         pacman1.movimiento(mapa1,1,1);
-
-
         for (int filas_m1=0; filas_m1< 17; filas_m1++){
                 for(int col_m1=0; col_m1<40; col_m1++){
                     if (mapa1.mapa_1[filas_m1][col_m1]=='o'){
@@ -48,7 +53,7 @@ int main()
         }
 
 
-        clear(mapa1.escenario_);
+        clear(mapa1.buffer);
 
         comida1.dibujar_comida(mapa1,1);
         poder1.dibujar_comida(mapa1,1);

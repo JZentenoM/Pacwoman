@@ -10,7 +10,7 @@ using namespace std;
 class escenario
 {
     public:
-        BITMAP *escenario_;
+        BITMAP *buffer;
         BITMAP *roca;
         BITMAP *roca1;
         BITMAP *roca2;
@@ -31,6 +31,7 @@ class escenario
         BITMAP *roca17;
         BITMAP *roca18;
         BITMAP *roca19;
+
 
 
         char mapa_1[Filas][Columnas]={
@@ -73,7 +74,7 @@ class escenario
                 "              BoB     BoB              ",};
 
         escenario(){
-        escenario_ = create_bitmap (1200 ,510);
+        buffer = create_bitmap (1200 ,510);
         roca= load_bitmap("roca.bmp",NULL);
         roca1=load_bitmap("roca1.bmp",NULL);
         roca2=load_bitmap("roca2.bmp",NULL);
@@ -101,45 +102,47 @@ class escenario
             for (filas_m1=0; filas_m1< Filas; filas_m1++){
                 for(col_m1=0; col_m1<Columnas; col_m1++){
                     if (mapa_1[filas_m1][col_m1]=='X')
-                        draw_sprite(escenario_,roca,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='Z')
-                        draw_sprite(escenario_,roca1,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca1,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='C')
-                        draw_sprite(escenario_,roca2,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca2,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='V')
-                        draw_sprite(escenario_,roca3,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca3,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='B')
-                        draw_sprite(escenario_,roca4,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca4,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='N')
-                        draw_sprite(escenario_,roca5,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca5,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='M')
-                        draw_sprite(escenario_,roca6,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca6,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='A')
-                        draw_sprite(escenario_,roca7,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca7,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='S')
-                        draw_sprite(escenario_,roca8,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca8,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='D')
-                        draw_sprite(escenario_,roca9,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca9,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='F')
-                        draw_sprite(escenario_,roca10,col_m1*30,filas_m1*30);
+                        draw_sprite(
+                                    buffer,roca10,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='G')
-                        draw_sprite(escenario_,roca11,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca11,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='H')
-                        draw_sprite(escenario_,roca12,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca12,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='J')
-                        draw_sprite(escenario_,roca13,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca13,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='K')
-                        draw_sprite(escenario_,roca14,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca14,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='L')
-                        draw_sprite(escenario_,roca15,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca15,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='Q')
-                        draw_sprite(escenario_,roca16,col_m1*30,filas_m1*30);
+                        draw_sprite(
+                                    buffer,roca16,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='W')
-                        draw_sprite(escenario_,roca17,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca17,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='E')
-                        draw_sprite(escenario_,roca18,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca18,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='R')
-                        draw_sprite(escenario_,roca19,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca19,col_m1*30,filas_m1*30);
                     }}}
 
         void dibujar_mapa2(){
@@ -147,46 +150,48 @@ class escenario
             for (filas_m1=0; filas_m1< Filas; filas_m1++){
                 for(col_m1=0; col_m1<Columnas; col_m1++){
                     if (mapa_2[filas_m1][col_m1]=='X')
-                        draw_sprite(escenario_,roca,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='Z')
-                        draw_sprite(escenario_,roca1,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca1,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='C')
-                        draw_sprite(escenario_,roca2,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca2,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='V')
-                        draw_sprite(escenario_,roca3,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca3,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='B')
-                        draw_sprite(escenario_,roca4,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca4,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='N')
-                        draw_sprite(escenario_,roca5,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca5,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='M')
-                        draw_sprite(escenario_,roca6,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca6,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='A')
-                        draw_sprite(escenario_,roca7,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca7,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='S')
-                        draw_sprite(escenario_,roca8,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca8,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='D')
-                        draw_sprite(escenario_,roca9,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca9,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='F')
-                        draw_sprite(escenario_,roca10,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca10,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='G')
-                        draw_sprite(escenario_,roca11,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca11,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='H')
-                        draw_sprite(escenario_,roca12,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca12,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='J')
-                        draw_sprite(escenario_,roca13,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca13,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='K')
-                        draw_sprite(escenario_,roca14,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca14,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='L')
-                        draw_sprite(escenario_,roca15,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca15,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='Q')
-                        draw_sprite(escenario_,roca16,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca16,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='W')
-                        draw_sprite(escenario_,roca17,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca17,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='E')
-                        draw_sprite(escenario_,roca18,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca18,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='R')
-                        draw_sprite(escenario_,roca19,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca19,col_m1*30,filas_m1*30);
                     }}}
+
+
 
 
 

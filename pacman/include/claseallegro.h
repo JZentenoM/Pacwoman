@@ -9,6 +9,7 @@ class claseallegro
 
     public:
 
+
         claseallegro(){
             allegro_init();
             install_keyboard();
@@ -17,11 +18,11 @@ class claseallegro
 
         }
 
-        void pantalla(escenario escenario1){
-            blit(escenario1.escenario_, screen, 0,0,0,0,1200,510);
+        template<class T>
+        void pantalla(T escenario1){
+            blit(escenario1.buffer, screen, 0,0,0,0,1200,510);
+
         }
-
-
 
 
 };

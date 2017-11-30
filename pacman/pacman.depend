@@ -285,7 +285,7 @@
 
 1511822644 source:c:\users\usuario\pacwoman\pacman\include\entidad.h
 
-1511912585 source:c:\users\usuario\pacwoman\pacman\include\escenario.h
+1512000880 source:c:\users\usuario\pacwoman\pacman\include\escenario.h
 	<allegro.h>
 
 1511822644 source:c:\users\usuario\pacwoman\pacman\include\mapa.h
@@ -299,15 +299,15 @@
 
 1511822644 source:c:\users\usuario\pacwoman\pacman\src\powerup.cpp
 
-1511840604 source:c:\users\usuario\pacwoman\pacman\include\powerup.h
+1512000932 source:c:\users\usuario\pacwoman\pacman\include\powerup.h
 	<allegro.h>
 	"escenario.h"
 	"personaje.h"
 
-1511912585 c:\users\usuario\pacwoman\pacman\include\escenario.h
+1512000880 c:\users\usuario\pacwoman\pacman\include\escenario.h
 	<allegro.h>
 
-1511917284 c:\users\usuario\pacwoman\pacman\include\personaje.h
+1512000913 c:\users\usuario\pacwoman\pacman\include\personaje.h
 	"entidad.h"
 	"escenario.h"
 	"claseallegro.h"
@@ -316,18 +316,18 @@
 
 1511822644 c:\users\usuario\pacwoman\pacman\include\entidad.h
 
-1511925047 c:\users\usuario\pacwoman\pacman\include\claseallegro.h
+1512000767 c:\users\usuario\pacwoman\pacman\include\claseallegro.h
 	<allegro.h>
 	<cstdlib>
 	"escenario.h"
 
-1511834515 c:\users\usuario\pacwoman\pacman\include\enemigo.h
+1512000899 c:\users\usuario\pacwoman\pacman\include\enemigo.h
 	"escenario.h"
 	"entidad.h"
 	<allegro.h>
 	<cstdlib>
 
-1511997062 source:c:\users\usuario\pacwoman\pacman\main.cpp
+1512005750 source:c:\users\usuario\pacwoman\pacman\main.cpp
 	<allegro.h>
 	<cstdlib>
 	"personaje.h"
@@ -338,24 +338,24 @@
 	"powerup.h"
 	"menu.h"
 
-1511840604 c:\users\usuario\pacwoman\pacman\include\powerup.h
+1512000932 c:\users\usuario\pacwoman\pacman\include\powerup.h
 	<allegro.h>
 	"escenario.h"
 	"personaje.h"
 
-1511917284 source:c:\users\usuario\pacwoman\pacman\include\personaje.h
+1512000913 source:c:\users\usuario\pacwoman\pacman\include\personaje.h
 	"entidad.h"
 	"escenario.h"
 	"claseallegro.h"
 	"enemigo.h"
 	<allegro.h>
 
-1511925047 source:c:\users\usuario\pacwoman\pacman\include\claseallegro.h
+1512000767 source:c:\users\usuario\pacwoman\pacman\include\claseallegro.h
 	<allegro.h>
 	<cstdlib>
 	"escenario.h"
 
-1511834515 source:c:\users\usuario\pacwoman\pacman\include\enemigo.h
+1512000899 source:c:\users\usuario\pacwoman\pacman\include\enemigo.h
 	"escenario.h"
 	"entidad.h"
 	<allegro.h>
@@ -521,7 +521,7 @@
 
 1511822644 source:c:\users\usuario\pacwoman\pacman\src\vida.cpp
 
-1511925535 c:\users\usuario\pacwoman\pacman\include\menu.h
+1512005815 c:\users\usuario\pacwoman\pacman\include\menu.h
 	<allegro.h>
 	"escenario.h"
 

@@ -6,24 +6,36 @@
 class menu
 {
     public:
-        BITMAP *menu_mb;
+        BITMAP *buffer;
         BITMAP *menu_;
+        BITMAP *menu_2;
         int posX;
         int posY;
 
 
         menu(){
-        posX = 10;
-        posY = 10;
-        menu_mb = load_bitmap("pacman.bmp",NULL);
-        menu_ = create_bitmap(30,30);
+        menu_ = load_bitmap("menu.bmp",NULL);
+        menu_2= load_bitmap("menu3.bmp",NULL);
+        buffer = create_bitmap(1200,510);
 
         }
 
-        void dibujarMenu(escenario escenario1){
-            blit(menu_mb,menu_,1*30,0,0,0,30,30);
-            draw_sprite(escenario1.escenario_, menu_,0, 0);
-        }
+        void dibujarMenu(){
+            int color=0;
+            int y=0;
+            int contador = 0;
+            bool salida = false;
+            bool cargando = false;
+
+            while (!salida){
+                if(color < 25){
+                    draw_sprite(buffer, menu_,0, 0);
+             }
+
+
+        }}
+
+
 
 
 

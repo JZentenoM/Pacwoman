@@ -34,11 +34,11 @@ class personaje : public entidad
         void dibujarPersonaje(escenario escenario1, bool r){
             if (r==true){
                 blit(pacman_mb, pacman, direccion*30,0,0,0,30,30);
-                draw_sprite(escenario1.escenario_, pacman,posX, posY);}
+                draw_sprite(escenario1.buffer, pacman,posX, posY);}
 
             else{
                 blit(pacman_mb,pacman,1*30,0,0,0,30,30);
-                draw_sprite(escenario1.escenario_, pacman,posX, posY);}
+                draw_sprite(escenario1.buffer, pacman,posX, posY);}
         }
 
 
@@ -136,10 +136,10 @@ class personaje : public entidad
             if ((en1.posY == posY && en1.posX == posX) || (posY == en1.posY-30 && posX == en1.posX-30) || (posY == en1.posY+30 && posX == en1.posX+30)){
                 for (int j=0; j<=6;j++){
                     clear(pacman);
-                    clear(escenario1.escenario_);
+                    clear(escenario1.buffer);
                     escenario1.dibujar_mapa();
                         blit(muerte,pacman,j*30,0,0,0,30,30);
-                        draw_sprite(escenario1.escenario_,pacman,posX, posY);
+                        draw_sprite(escenario1.buffer,pacman,posX, posY);
                         juego.pantalla(escenario1);
                         rest(90);}
                     posX=30*19;

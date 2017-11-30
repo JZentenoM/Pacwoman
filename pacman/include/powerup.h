@@ -35,16 +35,16 @@ class powerup
 
                     if (power==1){
                         if (escenario1.mapa_1[filas_m1][col_m1]=='o'){
-                            draw_sprite(escenario1.escenario_,coin,col_m1*30,filas_m1*30);}
+                            draw_sprite(escenario1.buffer,coin,col_m1*30,filas_m1*30);}
                         if ((escenario1.mapa_1[filas_m1][col_m1]=='P')){
-                            draw_sprite(escenario1.escenario_,poder,col_m1*30,filas_m1*30);}
+                            draw_sprite(escenario1.buffer,poder,col_m1*30,filas_m1*30);}
                     }
 
                     else if (power==2){
                         if (escenario1.mapa_2[filas_m1][col_m1]=='o'){
-                            draw_sprite(escenario1.escenario_,coin,col_m1*30,filas_m1*30);}
+                            draw_sprite(escenario1.buffer,coin,col_m1*30,filas_m1*30);}
                         if ((escenario1.mapa_2[filas_m1][col_m1]=='P')){
-                            draw_sprite(escenario1.escenario_,poder,col_m1*30,filas_m1*30);}
+                            draw_sprite(escenario1.buffer,poder,col_m1*30,filas_m1*30);}
                     }
                 }
             }

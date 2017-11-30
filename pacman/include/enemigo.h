@@ -29,7 +29,7 @@ class enemigo : public entidad
 
         void dibujar_fantasma(escenario escenario1){
             blit(enemigo_mb, enemigo_,0,0,0,0,30,30);
-            draw_sprite(escenario1.escenario_, enemigo_, posX, posY);}
+            draw_sprite(escenario1.buffer, enemigo_, posX, posY);}
 
 
 
