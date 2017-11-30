@@ -19,9 +19,9 @@ class claseallegro
         }
 
         template<class T>
-        void pantalla(T escenario1){
-            blit(escenario1.buffer, screen, 0,0,0,0,1200,510);
 
+        void pantalla(T mapa_bits){
+            blit(mapa_bits.buffer, screen, 0,0,0,0,1200,510);
         }
 
 

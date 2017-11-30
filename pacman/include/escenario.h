@@ -47,7 +47,7 @@ class escenario
                 "XGZZCoNoXZZZCoBoQKKKKKR BoXZZZCoNoXZZGC",
                 " VooooVoooooooooooooooooooooooooVooooV ",
                 " VoXZZDoXZZZZZCoXZCoXZCoXZZZZZCoMZZCoV ",
-                " Vooooooooooooooooo oooooooooPPPPPoooV ",
+                " Vooooooooooooooooo oooooooooooooooooV ",
                 " VoXZZCoXZZCoASoAZZZZZSoASoXZZCoXZZCoV ",
                 " VoooooooooooVVoV     VoVVoooooooooooV ",
                 " MZZZZZZZZZZZDVoV     VoVMZZZZZZZZZZZD ",
@@ -57,17 +57,17 @@ class escenario
         char mapa_2[Filas][Columnas]={
                 "              NoN     NoN              ",
                 " AZZZZZZZZZZZSVoV     VoVAZZZZZZZZZZZS ",
-                " V           VVoV     VoVV           V ",
+                " VoooooooooooVVoV     VoVVoooooooooooV ",
                 " V XZZC XZZC MDoMZZZZZDoMD XZZC XZZC V ",
-                " V                                   V ",
-                " V XZZC AZZS N   N AZGZGZS AZZS XZZC V ",//
-                " V      V  V V   V V V V V V  V      V ",
-                "XFZZCoN V  V V   V V V V V V  V NoXZZFC",
-                "ooooooV VZZV VZZZV V V V V VZZV V ooooo",
-                "XGZZCoB V  V V   V V V V V V  V BoXZZGC",
-                " V      V  V V   V V V V V V  V      V ",
-                " VoXZZCoB  B B   B B B B B B  B XZZC V ",//
-                " V                                   V ",
+                " VoooooooooooooooooooooooooooooooooooV ",
+                " V XZZCoAZZSoNoooNoAZGZGZS AZZSoXZZC V ",
+                " VooooooVooVoVoooVoVoVoVoVoVooVooooooV ",
+                "XFZZCoNoVooVoVoooVoVoVoVoVoVooVoNoXZZFC",
+                "ooooooVoVZZVoVZZZVoVoVoVoVoVZZVoV ooooo",
+                "XGZZCoBoVooVoVoooVoVoVoVoVoVooVoBoXZZGC",
+                " VooooooVooVoVoooVoVoVoVoVoVooVooooooV ",
+                " VoXZZCoBooBoBoooBoBoBoBoBoBooBoXZZC V ",
+                " VoooooooooooooooooooooooooooooooooooV ",
                 " VoXZZCoXZZCoASoAZZZZZSoASoXZZCoXZZCoV ",
                 " VoooooooooooVVoV     VoVVPPPPPPPPPPPV ",
                 " MZZZZZZZZZZZDVoV     VoVMZZZZZZZZZZZD ",
@@ -122,8 +122,7 @@ class escenario
                     else if (mapa_1[filas_m1][col_m1]=='D')
                         draw_sprite(buffer,roca9,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='F')
-                        draw_sprite(
-                                    buffer,roca10,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca10,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='G')
                         draw_sprite(buffer,roca11,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='H')
@@ -135,8 +134,7 @@ class escenario
                     else if (mapa_1[filas_m1][col_m1]=='L')
                         draw_sprite(buffer,roca15,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='Q')
-                        draw_sprite(
-                                    buffer,roca16,col_m1*30,filas_m1*30);
+                        draw_sprite(buffer,roca16,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='W')
                         draw_sprite(buffer,roca17,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='E')
@@ -189,7 +187,9 @@ class escenario
                         draw_sprite(buffer,roca18,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='R')
                         draw_sprite(buffer,roca19,col_m1*30,filas_m1*30);
-                    }}}
+                    }
+                }
+            }
 
 
 
