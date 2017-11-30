@@ -536,14 +536,14 @@
 	"escenario.h"
 	<iostream>
 
-1512050687 source:c:\users\usuario\pacwoman\pacman\include\vida.h
+1512054404 source:c:\users\usuario\pacwoman\pacman\include\vida.h
 	<iostream>
 	<stack>
 	<cstdlib>
 	"escenario.h"
 	<allegro.h>
 
-1512050687 c:\users\usuario\pacwoman\pacman\include\vida.h
+1512054404 c:\users\usuario\pacwoman\pacman\include\vida.h
 	<iostream>
 	<stack>
 	<cstdlib>

@@ -46,9 +46,6 @@
 		<Unit filename="include/escenario.h">
 			<Option compile="1" />
 		</Unit>
-		<Unit filename="include/mapa.h">
-			<Option compile="1" />
-		</Unit>
 		<Unit filename="include/menu.h">
 			<Option compile="1" />
 		</Unit>

@@ -33,7 +33,7 @@ class vida
 
         template <class E>
         void dibujar_vida(E escenario1){
-            if (true){
+            if (cont==3){
                 for (int filas_m1=0; filas_m1< 17; filas_m1++){
                 for(int col_m1=0; col_m1<40; col_m1++){
                     if (escenario1.mapa_1[filas_m1][col_m1]=='P')
