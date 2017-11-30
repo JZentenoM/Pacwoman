@@ -285,8 +285,9 @@
 
 1511822644 source:c:\users\usuario\pacwoman\pacman\include\entidad.h
 
-1512018136 source:c:\users\usuario\pacwoman\pacman\include\escenario.h
+1512050868 source:c:\users\usuario\pacwoman\pacman\include\escenario.h
 	<allegro.h>
+	"vida.h"
 
 1511822644 source:c:\users\usuario\pacwoman\pacman\include\mapa.h
 	<stdlib.h>
@@ -304,10 +305,11 @@
 	"escenario.h"
 	"personaje.h"
 
-1512018136 c:\users\usuario\pacwoman\pacman\include\escenario.h
+1512050868 c:\users\usuario\pacwoman\pacman\include\escenario.h
 	<allegro.h>
+	"vida.h"
 
-1512017804 c:\users\usuario\pacwoman\pacman\include\personaje.h
+1512052519 c:\users\usuario\pacwoman\pacman\include\personaje.h
 	"entidad.h"
 	"escenario.h"
 	"claseallegro.h"
@@ -316,7 +318,7 @@
 
 1511822644 c:\users\usuario\pacwoman\pacman\include\entidad.h
 
-1512019449 c:\users\usuario\pacwoman\pacman\include\claseallegro.h
+1512021420 c:\users\usuario\pacwoman\pacman\include\claseallegro.h
 	<allegro.h>
 	<cstdlib>
 	"escenario.h"
@@ -327,7 +329,7 @@
 	<allegro.h>
 	<cstdlib>
 
-1512019225 source:c:\users\usuario\pacwoman\pacman\main.cpp
+1512051737 source:c:\users\usuario\pacwoman\pacman\main.cpp
 	<allegro.h>
 	<cstdlib>
 	"personaje.h"
@@ -337,20 +339,21 @@
 	"enemigo.h"
 	"powerup.h"
 	"menu.h"
+	"vida.h"
 
 1512017043 c:\users\usuario\pacwoman\pacman\include\powerup.h
 	<allegro.h>
 	"escenario.h"
 	"personaje.h"
 
-1512017804 source:c:\users\usuario\pacwoman\pacman\include\personaje.h
+1512052519 source:c:\users\usuario\pacwoman\pacman\include\personaje.h
 	"entidad.h"
 	"escenario.h"
 	"claseallegro.h"
 	"enemigo.h"
 	<allegro.h>
 
-1512016144 source:c:\users\usuario\pacwoman\pacman\include\claseallegro.h
+1512021420 source:c:\users\usuario\pacwoman\pacman\include\claseallegro.h
 	<allegro.h>
 	<cstdlib>
 	"escenario.h"
@@ -532,4 +535,18 @@
 	<allegro.h>
 	"escenario.h"
 	<iostream>
+
+1512050687 source:c:\users\usuario\pacwoman\pacman\include\vida.h
+	<iostream>
+	<stack>
+	<cstdlib>
+	"escenario.h"
+	<allegro.h>
+
+1512050687 c:\users\usuario\pacwoman\pacman\include\vida.h
+	<iostream>
+	<stack>
+	<cstdlib>
+	"escenario.h"
+	<allegro.h>
 

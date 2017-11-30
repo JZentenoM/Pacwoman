@@ -8,13 +8,15 @@ class claseallegro
 {
 
     public:
-
+        MIDI *musica;
 
         claseallegro(){
             allegro_init();
             install_keyboard();
             set_color_depth(32);
             set_gfx_mode(GFX_AUTODETECT_WINDOWED,1200,510,0,0);
+            musica = load_midi("pacman.mid");
+            play_midi(musica,0);
 
         }
 

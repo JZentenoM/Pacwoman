@@ -1,7 +1,7 @@
 #ifndef ESCENARIO_H
 #define ESCENARIO_H
 #include <allegro.h>
-
+#include "vida.h"
 
 #define Filas 17
 #define Columnas 40
@@ -10,6 +10,7 @@ using namespace std;
 class escenario
 {
     public:
+
         BITMAP *buffer;
         BITMAP *roca;
         BITMAP *roca1;
@@ -31,12 +32,14 @@ class escenario
         BITMAP *roca17;
         BITMAP *roca18;
         BITMAP *roca19;
+        BITMAP *vida_;
+
 
 
 
         char mapa_1[Filas][Columnas]={
                 "              NoN     NoN              ",
-                " AZZZZZZZZZZZSVoV     VoVAZZZZZZZZZZZS ",
+                " AZZZZZZZZZZZSVoV PPP VoVAZZZZZZZZZZZS ",
                 " VoooooooooooVVoV     VoVVoooooooooooV ",
                 " VoXZZCoXZZCoMDoMZZZZZDoMDoXZZCoXZZCoV ",
                 " VoooooooooooooooooooooooooooooooooooV ",
@@ -56,7 +59,7 @@ class escenario
 
         char mapa_2[Filas][Columnas]={
                 "              NoN     NoN              ",
-                " AZZZZZZZZZZZSVoV     VoVAZZZZZZZZZZZS ",
+                " AZZZZZZZZZZZSVoV PPP VoVAZZZZZZZZZZZS ",
                 " VoooooooooooVVoV     VoVVoooooooooooV ",
                 " V XZZC XZZC MDoMZZZZZDoMD XZZC XZZC V ",
                 " VoooooooooooooooooooooooooooooooooooV ",
@@ -95,6 +98,9 @@ class escenario
         roca17=load_bitmap("roca17.bmp",NULL);
         roca18=load_bitmap("roca18.bmp",NULL);
         roca19=load_bitmap("roca19.bmp",NULL);
+        vida_=load_bitmap("vida.bmp",NULL);
+
+
         }
 
         void dibujar_mapa(){
@@ -141,6 +147,9 @@ class escenario
                         draw_sprite(buffer,roca18,col_m1*30,filas_m1*30);
                     else if (mapa_1[filas_m1][col_m1]=='R')
                         draw_sprite(buffer,roca19,col_m1*30,filas_m1*30);
+                    else if (mapa_1[filas_m1][col_m1]=='P')
+                        draw_sprite(buffer,vida_,col_m1*30,filas_m1*30);
+
                     }}}
 
         void dibujar_mapa2(){
@@ -187,10 +196,11 @@ class escenario
                         draw_sprite(buffer,roca18,col_m1*30,filas_m1*30);
                     else if (mapa_2[filas_m1][col_m1]=='R')
                         draw_sprite(buffer,roca19,col_m1*30,filas_m1*30);
+                    else if (mapa_2[filas_m1][col_m1]=='P')
+                        draw_sprite(buffer,vida_,col_m1*30,filas_m1*30);
                     }
                 }
             }
-
 
 
 

@@ -8,8 +8,7 @@
 #include "enemigo.h"
 #include "powerup.h"
 #include "menu.h"
-
-MIDI *musica = load_midi("pacman.mid");
+#include "vida.h"
 
 int main()
 {
@@ -26,6 +25,7 @@ int main()
             clear(mapa1.buffer);
             menu1.dibujarMenu(1);
             juego.pantalla(menu1);
+
     }
 
 
@@ -37,6 +37,8 @@ int main()
         clear(mapa1.buffer);
         menu1.dibujarMenu(2);
         juego.pantalla(menu1);
+
+
 
         if (key[KEY_1]){
             numPlayer = 1;
@@ -67,11 +69,16 @@ int main()
  // COMIDA
     powerup comida1;
 
+  // VIDA
+    vida vida_;
 
 
  //BÚCLE DEL JUEGO
 
     while((!key[KEY_ESC]) || gameover){
+
+ // DIBUJAR VIDA
+        vida_.dibujar_vida(mapa1);
 
  // MOVIMIENTO DEL PACMAN
         for (int i=0; i<numPlayer; i++)
@@ -85,6 +92,8 @@ int main()
                             if (pacman[i].posY/30==filas_m1 && pacman[i].posX/30 == col_m1){
                                 mapa1.mapa_1[filas_m1][col_m1]=' ';
                                 score=score+1;}
+
+
                         }
                     }
             }
@@ -99,10 +108,19 @@ int main()
 
 
  // IMPRESOR DE PERSONAJES Y FUNCION DE CHOQUE
+        int posicionVida=20;
         for (int f=0; f<4; f++){
             for (int i=0; i<numPlayer; i++){
                 pacman[i].dibujarPersonaje(mapa1,true,i+1);
-                pacman[i].choqueFantasma(fantasma[f],mapa1,juego);}}
+                pacman[i].choqueFantasma(fantasma[f],mapa1,juego);
+                if (pacman[i].choque){
+                        mapa1.mapa_1[1][posicionVida]=' ';
+                        posicionVida--;
+                        pacman[i].choque=false;
+                }
+            }
+        }
+
 
  // IMPRESOR DE ENEMIGO Y FUNCION DE MOVIMIENTO DE LOS MISMOS
         for (int f=0; f<4; f++){

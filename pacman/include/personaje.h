@@ -17,6 +17,7 @@ class personaje : public entidad
         BITMAP *pacman3_mb;
         BITMAP *pacman;
         BITMAP *muerte;
+        bool choque;
 
         personaje(){
             posX = 0;
@@ -27,6 +28,7 @@ class personaje : public entidad
             pacman3_mb = load_bitmap ("pacman3.bmp",NULL);
             muerte = load_bitmap("muerte.bmp",NULL);
             pacman = create_bitmap(30,30);
+            choque=false;
         }
 
 
@@ -174,8 +176,11 @@ class personaje : public entidad
                     blit(muerte,pacman,j*30,0,0,0,30,30);
                     draw_sprite(escenario1.buffer,pacman,posX, posY);
                     juego.pantalla(escenario1);
-                    rest(90);}
-                    posX=30*19;
+                    rest(90);
+
+                    choque=true;
+                    }
+                posX=30*19;
                     posY=30*12;
                     direccion=1;
                 }

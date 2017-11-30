@@ -58,7 +58,9 @@
 		<Unit filename="include/powerup.h">
 			<Option compile="1" />
 		</Unit>
-		<Unit filename="include/vida.h" />
+		<Unit filename="include/vida.h">
+			<Option compile="1" />
+		</Unit>
 		<Unit filename="main.cpp" />
 		<Unit filename="src/entidad.cpp" />
 		<Unit filename="src/mapa.cpp" />
