@@ -1,0 +1,25 @@
+
+¦¦¦¦¦¦¦¦¦ P A C W O M A N ¦¦¦¦¦¦¦¦¦¦¦ 
+
+
+1. Para iniciar el juego presiona la tecla ENTER
+
+2. Luego, en la segunda pantalla puedes escoger la cantidad de jugadores que participaran (maximo 3)
+
+3. Utiliza las flechas direccionales para controlar al jugador 1
+
+4. Utiliza WASD para controlar al jugador 2
+
+5. Utiliza IJKL para controlar al jugador 3
+
+7. Perderas una vida al impactar con cualquier enemigo
+
+8. Al perder una vida seras enviado a la posicion inicial del juego
+
+9. Todos los jugadores comparten la misma cantidad de vidad asi que ¡CUIDALAS!
+
+10.El juego finalizara al quedarte sin vidas
+
+11. Puedes finalizar el juego en cualquier momento presionando la tecla ESC
+
+12. Tu puntuacion se imprimirá en la consola al finalizar tu juego.
